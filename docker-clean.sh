@@ -14,5 +14,4 @@
 # @raycast.author www.harurow
 # @raycast.authorURL http://github.com/harurow
 
-docker stop $(docker ps -q) 2>/dev/null
-docker rmi $(docker images -q) -f 2>/dev/null
+docker stop $(docker ps -a -q); docker rm $(docker ps -a -q); docker rmi $(docker images -q) -f
